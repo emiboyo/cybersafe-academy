@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberSafe Admin</title>
+  <style>
+    body { font-family: Arial; padding: 2rem; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <h1>Admin Login</h1>
+  <input type="password" id="adminPass" placeholder="Enter password">
+  <button onclick="login()">Login</button>
+
+  <div id="adminPanel" class="hidden">
+    <h2>Certified Student</h2>
+    <p id="studentInfo"></p>
+  </div>
+
+  <script>
+    const adminPanel = document.getElementById("adminPanel");
+    const studentInfo = document.getElementById("studentInfo");
+
+    function login() {
+      const pass = document.getElementById("adminPass").value;
+      if (pass === "CyberSafe2025") {
+        adminPanel.classList.remove("hidden");
+        const name = localStorage.getItem("cybersafeCertified") || "No one certified yet";
+        studentInfo.textContent = name;
+      } else {
+        alert("Incorrect password");
+      }
+    }
+  </script>
+</body>
+</html>

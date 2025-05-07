@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberSafe Certificate</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      padding: 2rem;
+    }
+    .certificate {
+      border: 6px solid #4A90E2;
+      background: white;
+      padding: 3rem;
+      width: 80%;
+      margin: auto;
+    }
+    h1 {
+      color: #4A90E2;
+    }
+    .name {
+      font-size: 2rem;
+      margin: 1rem 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="certificate">
+    <h1>CyberSafe Academy</h1>
+    <p>This certifies that</p>
+    <div class="name" id="certName">[Name]</div>
+    <p>has completed the Cyber Safety Basics Training</p>
+    <p>🛡️ Stay safe. Be smart. Be a Cyber Hero! 🛡️</p>
+    <p style="margin-top: 2rem;">Date: <span id="certDate"></span></p>
+  </div>
+
+  <script>
+    const name = localStorage.getItem("cybersafeCertified");
+    const date = new Date().toLocaleDateString();
+    document.getElementById("certName").textContent = name || "Your Name";
+    document.getElementById("certDate").textContent = date;
+  </script>
+</body>
+</html>

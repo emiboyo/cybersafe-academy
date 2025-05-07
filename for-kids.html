@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CyberSafe Academy - For Kids</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>CyberSafe Academy</h1>
+    <p>Smart Kids. Informed Parents. Safe Online.</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="for-kids.html">For Kids</a>
+      <a href="for-parents.html">For Parents</a>
+      <a href="get-certified.html">Get Certified</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Welcome, Cyber Heroes!</h2>
+      <p>Here you'll learn how to stay safe online, play games, and earn badges.</p>
+    </section>
+<section>
+  <h2>Cyber Safety Quiz</h2>
+  <p>Answer these questions to test your cyber smarts!</p>
+
+  <form id="quizForm">
+    <label>1. Should you share your password with friends?</label><br>
+    <input type="radio" name="q1" value="no"> No<br>
+    <input type="radio" name="q1" value="yes"> Yes<br><br>
+
+    <label>2. What should you do if a stranger messages you online?</label><br>
+    <input type="radio" name="q2" value="tell"> Tell a trusted adult<br>
+    <input type="radio" name="q2" value="reply"> Reply and ask who they are<br><br>
+
+    <button type="button" onclick="checkAnswers()">Submit Answers</button>
+  </form>
+
+  <p id="quizResult"></p>
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CyberSafe Academy. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
